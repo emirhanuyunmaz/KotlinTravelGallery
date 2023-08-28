@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="242dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddImagesAndLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:context=".views.AddImagesAndLocationActivity" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAddImagesAndLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="232dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="image_OnClick"
+        app:layout_constraintBottom_toTopOf="@+id/map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/gallery" />
+
+    <Button
+        android:id="@+id/buttonAddImagesAndLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:layout_marginBottom="31dp"
+        android:onClick="addImagesAndlocation_OnClick"
+        android:text="Add"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGoToImagesAndLocation"
+        tools:layout_editor_absoluteX="161dp" />
+
+    <Button
+        android:id="@+id/buttonGoToImagesAndLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:layout_marginBottom="16dp"
+        android:onClick="gotoImagesAndLocation_OnClick"
+        android:text="Goto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="161dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

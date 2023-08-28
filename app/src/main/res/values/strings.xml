@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">KotlinTravelGallery</string>
+    <string name="title_activity_add_images_and_location">AddImagesAndLocationActivity</string>
+</resources>
